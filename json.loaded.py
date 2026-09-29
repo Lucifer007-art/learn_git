@@ -10,3 +10,7 @@ data = {
 
 with open('data.json', 'w') as file:
     json.dump(data, file)
+
+
+with open('data.json', 'r') as file:
+    loaded_data = json.load(file)
