@@ -1,1 +1,14 @@
-print("hello world"/)
+import csv
+
+with open('data.csv','w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(['Name', 'Age', 'City'])
+    writer.writerow(['Alice', 30, 'New York'])
+    writer.writerow(['Bob', 25, 'Los Angeles'])
+    writer.writerow(['Charlie', 35, 'Chicago'])
+    writer.writerow(['David', 28, 'Houston'])
+
+with open('data.csv', 'r') as file:
+    reader = csv.reader(file)
+    for row in reader:
+        print(row)
